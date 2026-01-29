@@ -25,9 +25,7 @@ function App() {
           <p className="text-text-muted">
             © {new Date().getFullYear()} Maikol Duran. Todos los derechos reservados.
           </p>
-          <p className="text-text-muted text-sm mt-2">
-            Hecho con ❤️ y mucho ☕
-          </p>
+
         </div>
       </footer>
     </div>
