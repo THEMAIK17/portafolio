@@ -1,0 +1,78 @@
+{
+    "frontend": [
+        {
+            "name": "HTML",
+            "level": 70
+        },
+        {
+            "name": "CSS",
+            "level": 70
+        },
+        {
+            "name": "JavaScript",
+            "level": 70
+        },
+        {
+            "name": "React",
+            "level": 70
+        }
+    ],
+    "backend": [
+        {
+            "name": "Python",
+            "level": 70
+        },
+        {
+            "name": "C# / .NET",
+            "level": 70
+        },
+        {
+            "name": "Node.js",
+            "level": 70
+        },
+        {
+            "name": "MySQL",
+            "level": 70
+        },
+        {
+            "name": "PostgreSQL",
+            "level": 70
+        }
+    ],
+    "design": [
+        {
+            "name": "Resolución de problemas",
+            "level": 85
+        },
+        {
+            "name": "Pensamiento analítico",
+            "level": 85
+        },
+        {
+            "name": "Adaptabilidad",
+            "level": 90
+        },
+        {
+            "name": "Trabajo en equipo",
+            "level": 85
+        },
+        {
+            "name": "Aprendizaje continuo",
+            "level": 95
+        }
+    ],
+    "tools": [
+        {
+            "name": "Git / GitHub",
+            "level": 50
+        },
+        {
+            "name": "Scrum",
+            "level": 50
+        },
+        {
+            "name": "Metodologías Ágiles",
+            "level": 50
+        }
+    ]
+}

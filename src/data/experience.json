@@ -1,0 +1,63 @@
+[
+    {
+        "id": "1",
+        "position": "Developer Junior Full-Stack",
+        "company": "Riwi",
+        "location": "Barranquilla, Colombia",
+        "period": "Marzo 2025 - En curso",
+        "description": "Formación intensiva en desarrollo Full-Stack, trabajando con Python, JavaScript, C#/.NET, Node.js,React, HTML/CSS,PostgreSQL y MySQL. Experiencia en proyectos colaborativos usando metodologías ágiles (Scrum), participando en sprints, dailies y planning. Uso de herramientas de control de versiones como Git/GitHub.",
+        "technologies": [
+            "Python",
+            "JavaScript",
+            "React",
+            "C# / .NET",
+            "Node.js",
+            "HTML/CSS",
+            "MySQL",
+            "PostgreSQL",
+            "Git/GitHub",
+            "Scrum"
+        ],
+        "type": "work"
+    },
+    {
+        "id": "2",
+        "position": "Ingeniero Mecatrónico",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Marzo 2023 - Marzo 2025",
+        "description": "Formación profesional en mecatrónica con enfoque en análisis y resolución de problemas. Base sólida en pensamiento analítico y estructurado aplicable al desarrollo de software y soluciones tecnológicas.",
+        "technologies": [],
+        "type": "education"
+    },
+    {
+        "id": "3",
+        "position": "Tecnología En Gestión De Sistemas Electromecánicos",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Agosto 2021 - Marzo 2023",
+        "description": "Formación tecnológica en sistemas electromecánicos, desarrollando habilidades técnicas y de gestión de proyectos.",
+        "technologies": [],
+        "type": "education"
+    },
+    {
+        "id": "4",
+        "position": "Técnico Profesional En Mantenimiento Electromecánico",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Enero 2019 - Julio 2021",
+        "description": "Formación técnica profesional en mantenimiento electromecánico, cimentando bases en sistemas técnicos y resolución de problemas prácticos.",
+        "technologies": [],
+        "type": "education"
+    },
+    {
+        "id": "5",
+        "position": "Bachiller Académico",
+        "company": "Institución Educativa Distrital Inocencio Chinca",
+        "location": "Barranquilla, Colombia",
+        "period": "Finalizado en Diciembre 2018",
+        "description": "Educación secundaria completa con énfasis académico.",
+        "technologies": [],
+        "type": "education"
+    }
+]
