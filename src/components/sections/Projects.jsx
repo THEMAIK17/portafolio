@@ -19,7 +19,7 @@ export function Projects() {
                     <span className="inline-block px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-primary rounded-lg text-sm font-semibold uppercase tracking-wide mb-4">
                         Mi Trabajo
                     </span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-text mb-4">
+                    <h2 className="text-3xl lg:text-5xl font-bold text-text mb-4">
                         Proyectos Destacados
                     </h2>
                 </motion.div>

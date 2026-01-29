@@ -60,7 +60,7 @@ export function Hero() {
                         </motion.p>
 
                         <motion.h1
-                            className="text-5xl lg:text-7xl font-bold mb-6"
+                            className="text-4xl lg:text-7xl font-bold mb-6"
                             initial={{ opacity: 0, scale: 0.7 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.3, duration: 0.8, type: 'spring', bounce: 0.4 }}

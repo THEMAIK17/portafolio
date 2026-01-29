@@ -84,7 +84,7 @@ export function Skills() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ delay: 0.1, duration: 0.3 }}
-                        className="text-4xl lg:text-6xl font-bold mb-4 text-white"
+                        className="text-3xl lg:text-6xl font-bold mb-4 text-white"
                     >
                         Habilidades Técnicas
                     </motion.h2>
@@ -114,7 +114,7 @@ export function Skills() {
                                             <config.icon className="w-8 h-8 text-white" />
                                         </motion.div>
 
-                                        <h3 className="text-3xl font-black mb-2 text-white uppercase tracking-tight">
+                                        <h3 className="text-2xl lg:text-3xl font-black mb-2 text-white uppercase tracking-tight">
                                             {config.title}
                                         </h3>
 

@@ -83,10 +83,15 @@ html {
   scroll-padding-top: 80px;
   height: 100%;
   overflow-x: hidden;
+  color-scheme: dark;
+  /* Forzar modo oscuro en el navegador */
+  background-color: #0A0E27;
+  /* Fondo base para evitar destellos blancos */
 }
 
 body {
-  /* Degradado más oscuro y menos luminoso */
+  background-color: #0A0E27;
+  /* Fallback sólido */
   background: linear-gradient(135deg,
       #020814 0%,
       #050B1A 10%,
@@ -100,7 +105,8 @@ body {
       #121F2E 90%,
       #080E1C 100%);
   background-size: 400% 400%;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  /* Cambiado de fixed para mejor soporte móvil */
   animation: gradient-rotate 20s ease infinite;
   color: #FFFFFF;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

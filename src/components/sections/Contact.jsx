@@ -161,7 +161,7 @@ export function Contact() {
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        className="text-4xl lg:text-6xl font-bold mb-4 text-white"
+                        className="text-3xl lg:text-6xl font-bold mb-4 text-white"
                     >
                         Ponte en Contacto
                     </motion.h2>

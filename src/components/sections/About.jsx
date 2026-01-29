@@ -174,7 +174,7 @@ export function About() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
@@ -193,7 +193,7 @@ export function About() {
                             </motion.div>
 
                             <motion.div
-                                className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2"
+                                className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2"
                             >
                                 {stat.value}+
                             </motion.div>

@@ -49,7 +49,7 @@ export function Experience() {
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        className="text-4xl lg:text-6xl font-bold mb-4 text-white"
+                        className="text-3xl lg:text-6xl font-bold mb-4 text-white"
                     >
                         Experiencia & Educación
                     </motion.h2>
@@ -74,7 +74,7 @@ export function Experience() {
                             </span>
                         </motion.h3>
 
-                        <div className="relative pl-10 space-y-10">
+                        <div className="relative pl-8 md:pl-10 space-y-10">
                             <motion.div
                                 className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary via-secondary to-accent-purple rounded-full"
                                 initial={{ scaleY: 0, originY: 0 }}
@@ -91,7 +91,7 @@ export function Experience() {
                                     className="relative"
                                 >
                                     <motion.div
-                                        className="absolute -left-[43px] top-4 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-secondary border-4 border-bg-elevated shadow-lg shadow-primary/50"
+                                        className="absolute -left-[35px] md:-left-[43px] top-4 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-secondary border-4 border-bg-elevated shadow-lg shadow-primary/50"
                                         animate={{
                                             scale: [1, 1.3, 1],
                                             boxShadow: [
@@ -166,7 +166,7 @@ export function Experience() {
                             </span>
                         </motion.h3>
 
-                        <div className="relative pl-10 space-y-10">
+                        <div className="relative pl-8 md:pl-10 space-y-10">
                             <motion.div
                                 className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-accent-pink via-accent-purple to-accent rounded-full"
                                 initial={{ scaleY: 0, originY: 0 }}
@@ -183,7 +183,7 @@ export function Experience() {
                                     className="relative"
                                 >
                                     <motion.div
-                                        className="absolute -left-[43px] top-4 w-6 h-6 rounded-full bg-gradient-to-r from-accent-pink to-accent-purple border-4 border-bg-elevated shadow-lg shadow-accent-pink/50"
+                                        className="absolute -left-[35px] md:-left-[43px] top-4 w-6 h-6 rounded-full bg-gradient-to-r from-accent-pink to-accent-purple border-4 border-bg-elevated shadow-lg shadow-accent-pink/50"
                                         animate={{
                                             scale: [1, 1.3, 1],
                                             boxShadow: [
