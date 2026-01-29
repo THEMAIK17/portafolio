@@ -10,7 +10,7 @@ export const siteConfig = {
     social: {
         github: 'https://github.com/THEMAIK17',
         linkedin: 'https://www.linkedin.com/in/maikol-duran/',
-        instagram: 'https://www.instagram.com/maikol_duran/',
+        instagram: 'https://www.instagram.com/maikolduran17/',
         whatsapp: 'https://wa.me/3011822597'
     }
 };
