@@ -31,21 +31,22 @@ export function Projects() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                             transition={{ delay: index * 0.1 }}
+                            className="h-full"
                         >
-                            <Card className="group overflow-hidden">
-                                <div className="relative aspect-video mb-4 overflow-hidden rounded-lg">
+                            <Card className="group overflow-hidden h-full flex flex-col">
+                                <div className="relative aspect-video mb-6 overflow-hidden rounded-lg shrink-0">
                                     <img
                                         src={project.image}
                                         alt={project.title}
                                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-4 pb-4">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                                         {project.demoUrl && (
                                             <a
                                                 href={project.demoUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="px-4 py-2 bg-primary text-bg rounded-lg hover:bg-secondary transition-colors flex items-center gap-2"
+                                                className="px-6 py-2 bg-primary text-bg rounded-lg font-bold hover:bg-secondary transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 flex items-center gap-2"
                                             >
                                                 <FiExternalLink /> Demo
                                             </a>
@@ -55,7 +56,7 @@ export function Projects() {
                                                 href={project.githubUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="px-4 py-2 bg-surface text-text rounded-lg hover:bg-border transition-colors flex items-center gap-2"
+                                                className="px-6 py-2 bg-white/10 text-white backdrop-blur-md rounded-lg font-bold hover:bg-white/20 border border-white/20 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 flex items-center gap-2"
                                             >
                                                 <FiGithub /> Code
                                             </a>
@@ -63,13 +64,21 @@ export function Projects() {
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-text mb-2">{project.title}</h3>
-                                <p className="text-text-muted mb-4 line-clamp-2">{project.description}</p>
+                                <div className="flex flex-col flex-1">
+                                    <h3 className="text-xl lg:text-2xl font-bold text-text mb-3 group-hover:text-primary transition-colors">
+                                        {project.title}
+                                    </h3>
+                                    <p className="text-text-muted mb-6 line-clamp-3 flex-1">
+                                        {project.description}
+                                    </p>
 
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag) => (
-                                        <Badge key={tag}>{tag}</Badge>
-                                    ))}
+                                    <div className="flex flex-wrap gap-2 mt-auto">
+                                        {project.tags.map((tag) => (
+                                            <Badge key={tag} className="bg-surface-light border-border/50 text-xs font-medium">
+                                                {tag}
+                                            </Badge>
+                                        ))}
+                                    </div>
                                 </div>
                             </Card>
                         </motion.div>
