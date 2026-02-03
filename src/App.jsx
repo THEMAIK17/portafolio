@@ -8,7 +8,6 @@ import { Projects } from '@/components/sections/Projects'
 import { Contact } from '@/components/sections/Contact'
 
 function App() {
-  // Minor change to force Vercel redeploy
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
