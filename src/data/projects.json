@@ -1,17 +1,18 @@
 [
     {
         "id": "1",
-        "title": "E-Commerce Platform",
-        "description": "Plataforma de comercio electrónico completa con carrito de compras, procesamiento de pagos con Stripe, gestión de inventario en tiempo real y panel de administración. Incluye autenticación JWT y análisis de ventas.",
-        "image": "/assets/images/project1.jpg",
+        "title": "Firmness - Gestión de Maquinaria",
+        "description": "Solución Fullstack desarrollada para la gestión integral de inventarios, clientes y ventas en el sector de construcción y alquiler de maquinaria. Basada en Clean Architecture y con arquitectura distribuida.",
+        "image": "/assets/images/dashboard-firmness.png",
         "tags": [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Stripe"
+            ".NET 8.0",
+            "React 18",
+            "PostgreSQL",
+            "Docker",
+            "Clean Architecture"
         ],
-        "demoUrl": "https://demo.com",
-        "githubUrl": "https://github.com/tu-usuario/proyecto1"
+        "demoUrl": "https://firmeza-admin.vercel.app/",
+        "githubUrl": "https://github.com/THEMAIK17/Firmness"
     },
     {
         "id": "2",
