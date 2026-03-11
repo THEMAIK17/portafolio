@@ -16,29 +16,18 @@
     },
     {
         "id": "2",
-        "title": "Dashboard Analytics",
-        "description": "Dashboard interactivo para visualización de datos y análisis en tiempo real con gráficos dinámicos. Integración con Firebase para sincronización en tiempo real y autenticación de usuarios.",
-        "image": "/assets/images/project2.jpg",
+        "title": "Tekus - API REST de Proveedores",
+        "description": "Prueba técnica backend con arquitectura DDD y Clean Architecture en .NET 8. API REST documentada con Swagger, autenticación por API Key, paginación y búsqueda dinámica eficiente. Cubierta al 100% con pruebas unitarias usando xUnit y Moq.",
+        "image": "/assets/images/tekus-preview.png",
         "tags": [
-            "Vue.js",
-            "Firebase",
-            "Chart.js"
+            ".NET 8.0",
+            "React",
+            "SQL Server",
+            "DDD",
+            "Clean Architecture",
+            "xUnit"
         ],
-        "demoUrl": "https://demo.com",
-        "githubUrl": "https://github.com/tu-usuario/proyecto2"
-    },
-    {
-        "id": "3",
-        "title": "Mobile App Social",
-        "description": "Aplicación móvil de red social con chat en tiempo real utilizando Socket.io, compartir contenido multimedia, sistema de notificaciones push y perfiles de usuario personalizables.",
-        "image": "/assets/images/project3.jpg",
-        "tags": [
-            "React Native",
-            "Express",
-            "PostgreSQL",
-            "Socket.io"
-        ],
-        "demoUrl": "https://demo.com",
-        "githubUrl": "https://github.com/tu-usuario/proyecto3"
+        "demoUrl": "",
+        "githubUrl": "https://github.com/THEMAIK17/Tekus-Fullstack-Test"
     }
 ]
