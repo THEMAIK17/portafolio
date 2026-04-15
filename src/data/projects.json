@@ -16,9 +16,14 @@
     },
     {
         "id": "2",
+
         "title": "Tekus - API REST de Proveedores",
         "description": "Prueba técnica backend con arquitectura DDD y Clean Architecture en .NET 8. API REST documentada con Swagger, autenticación por API Key, paginación y búsqueda dinámica eficiente. Cubierta al 100% con pruebas unitarias usando xUnit y Moq.",
         "image": "/assets/images/tekus-preview.png",
+
+        "title": "Tekus - Gestión de Proveedores",
+        "description": "Prueba técnica Fullstack que implementa un CRUD completo de proveedores con arquitectura DDD y Clean Architecture. Incluye paginación, búsqueda dinámica, seguridad por API Key y pruebas unitarias con xUnit y Moq.",
+        "image": "/assets/images/project2.jpg",
         "tags": [
             ".NET 8.0",
             "React",
