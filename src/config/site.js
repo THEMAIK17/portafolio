@@ -3,7 +3,7 @@ export const siteConfig = {
     title: 'Maikol Duran | Desarrollador Full Stack',
     description: 'Portafolio profesional - Creando experiencias web excepcionales con tecnologías modernas',
     url: 'https://tu-sitio.com',
-    author: 'Tu Nombre',
+    author: 'Maikol Duran',
     email: 'maikold774@gmail.com',
     phone: '+57 (301) 182-2597',
     location: 'Barranquilla, Colombia',
