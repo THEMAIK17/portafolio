@@ -1,4 +1,220 @@
 {
-  "nav": { "work": "Mi Trabajo", "projects": "Proyectos Destacados" },
-  "buttons": { "demo": "Demo", "code": "Code" }
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role1": "Developer Junior Full-Stack",
+    "role2": "& Ingeniero Mecatrónico",
+    "description": "Transformo ideas en soluciones tecnológicas eficientes. Con pensamiento analítico y enfoque en la resolución de problemas, creo aplicaciones con código robusto.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame",
+    "downloadCV": "Descargar CV",
+    "scroll": "Scroll",
+    "cvFile": "/assets/downloads/CV-ARMANDO DURAN (2).pdf"
+  },
+  "about": {
+    "badge": "Conóceme",
+    "title": "Sobre Mí",
+    "p1_1": "Soy ",
+    "p1_2": "Ingeniero Mecatrónico",
+    "p1_3": " y ",
+    "p1_4": "Developer Junior Full-Stack",
+    "p1_5": ", con una sólida base analítica aplicada al desarrollo de ",
+    "p1_6": "soluciones eficientes",
+    "p1_7": ".",
+    "p2_1": "Tengo experiencia en proyectos usando ",
+    "p2_2": "Python, JavaScript, React, C#, y Node.js",
+    "p2_3": ", con habilidades en maquetación HTML/CSS y bases de datos MySQL y PostgreSQL. Acostumbrado a trabajar en ",
+    "p2_4": "sprints bajo metodologías ágiles (Scrum)",
+    "p2_5": ", participando en ceremonias (dailies, planning) y usando herramientas como Git/GitHub.",
+    "p3_1": "Me destaco por mi ",
+    "p3_2": "adaptabilidad",
+    "p3_3": ", ",
+    "p3_4": "pensamiento estructurado",
+    "p3_5": " y ",
+    "p3_6": "enfoque en la resolución de problemas",
+    "p3_7": " para crear soluciones tecnológicas efectivas.",
+    "features": [
+      {
+        "id": "1",
+        "title": "Resolución de Problemas",
+        "description": "Enfoque analítico para crear soluciones tecnológicas eficientes",
+        "icon": "FiCode",
+        "gradient": "from-primary to-secondary",
+        "borderColor": "border-primary"
+      },
+      {
+        "id": "2",
+        "title": "Aprendizaje Continuo",
+        "description": "Adaptabilidad y actualización constante en nuevas tecnologías",
+        "icon": "FiZap",
+        "gradient": "from-secondary to-accent-purple",
+        "borderColor": "border-secondary"
+      },
+      {
+        "id": "3",
+        "title": "Metodologías Ágiles",
+        "description": "Trabajo colaborativo en equipos Scrum con herramientas modernas",
+        "icon": "FiUsers",
+        "gradient": "from-accent-pink to-accent",
+        "borderColor": "border-accent-pink"
+      }
+    ],
+    "stats": [
+      { "label": "Proyectos en Desarrollo", "value": 10, "icon": "FiCode" },
+      { "label": "Tecnologías", "value": 8, "icon": "FiZap" },
+      { "label": "Años de Formación", "value": 2, "icon": "FiTrendingUp" }
+    ]
+  },
+  "experience": {
+    "badge": "Trayectoria",
+    "title": "Experiencia & Educación",
+    "items": [
+      {
+        "id": "1",
+        "position": "Developer Junior Full-Stack",
+        "company": "Riwi",
+        "location": "Barranquilla, Colombia",
+        "period": "Marzo 2025 - En curso",
+        "description": "Formación intensiva en desarrollo Full-Stack, trabajando con Python, JavaScript, C#/.NET, Node.js,React, HTML/CSS,PostgreSQL y MySQL. Experiencia en proyectos colaborativos usando metodologías ágiles (Scrum), participando en sprints, dailies y planning. Uso de herramientas de control de versiones como Git/GitHub.",
+        "technologies": ["Python", "JavaScript", "React", "C# / .NET", "Node.js", "HTML/CSS", "MySQL", "PostgreSQL", "Git/GitHub", "Scrum"],
+        "type": "work"
+      },
+      {
+        "id": "2",
+        "position": "Ingeniero Mecatrónico",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Marzo 2023 - Marzo 2025",
+        "description": "Formación profesional en mecatrónica con enfoque en análisis y resolución de problemas. Base sólida en pensamiento analítico y estructurado aplicable al desarrollo de software y soluciones tecnológicas.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "3",
+        "position": "Tecnología En Gestión De Sistemas Electromecánicos",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Agosto 2021 - Marzo 2023",
+        "description": "Formación tecnológica en sistemas electromecánicos, desarrollando habilidades técnicas y de gestión de proyectos.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "4",
+        "position": "Técnico Profesional En Mantenimiento Electromecánico",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "Enero 2019 - Julio 2021",
+        "description": "Formación técnica profesional en mantenimiento electromecánico, cimentando bases en sistemas técnicos y resolución de problemas prácticos.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "5",
+        "position": "Bachiller Académico",
+        "company": "Institución Educativa Distrital Inocencio Chinca",
+        "location": "Barranquilla, Colombia",
+        "period": "Finalizado en Diciembre 2018",
+        "description": "Educación secundaria completa con énfasis académico.",
+        "technologies": [],
+        "type": "education"
+      }
+    ]
+  },
+  "skills": {
+    "badge": "Habilidades",
+    "title": "Stack Tecnológico",
+    "description": "Estas son las herramientas y tecnologías que utilizo para transformar ideas en realidad.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Soft Skills",
+    "tools": "Herramientas",
+    "techCount": "tecnologías",
+    "subtitles": {
+      "frontend": "Desarrollo de interfaces",
+      "backend": "Desarrollo del servidor",
+      "design": "Habilidades Humanas",
+      "tools": "DevOps & Productividad"
+    },
+    "items": {
+      "frontend": [
+        {"name": "HTML", "level": 70},
+        {"name": "CSS", "level": 70},
+        {"name": "JavaScript", "level": 70},
+        {"name": "React", "level": 70}
+      ],
+      "backend": [
+        {"name": "Python", "level": 70},
+        {"name": "C# / .NET", "level": 70},
+        {"name": "Node.js", "level": 70},
+        {"name": "MySQL", "level": 70},
+        {"name": "PostgreSQL", "level": 70}
+      ],
+      "design": [
+        {"name": "Resolución de problemas", "level": 85},
+        {"name": "Pensamiento analítico", "level": 85},
+        {"name": "Adaptabilidad", "level": 90},
+        {"name": "Trabajo en equipo", "level": 85},
+        {"name": "Aprendizaje continuo", "level": 95}
+      ],
+      "tools": [
+        {"name": "Git / GitHub", "level": 50},
+        {"name": "Scrum", "level": 50},
+        {"name": "Metodologías Ágiles", "level": 50}
+      ]
+    }
+  },
+  "projects": {
+    "badge": "Portafolio",
+    "title": "Proyectos Destacados",
+    "viewCode": "Ver Código",
+    "viewDemo": "Ver Demo",
+    "items": [
+      {
+        "id": "1",
+        "title": "Firmness - Gestión de Maquinaria",
+        "description": "Solución Fullstack desarrollada para la gestión integral de inventarios, clientes y ventas en el sector de construcción y alquiler de maquinaria. Basada en Clean Architecture y con arquitectura distribuida.",
+        "image": "/assets/images/dashboard-firmness.png",
+        "tags": [".NET 8.0", "React 18", "PostgreSQL", "Docker", "Clean Architecture"],
+        "demoUrl": "https://firmeza-admin.vercel.app/",
+        "githubUrl": "https://github.com/THEMAIK17/Firmness"
+      },
+      {
+        "id": "2",
+        "title": "Tekus - API REST de Proveedores",
+        "description": "Prueba técnica backend con arquitectura DDD y Clean Architecture en .NET 8. API REST documentada con Swagger, autenticación por API Key, paginación y búsqueda dinámica eficiente. Cubierta al 100% con pruebas unitarias usando xUnit y Moq.",
+        "image": "/assets/images/tekus-preview.png",
+        "tags": [".NET 8.0", "React", "SQL Server", "DDD", "Clean Architecture", "xUnit"],
+        "demoUrl": "",
+        "githubUrl": "https://github.com/THEMAIK17/Tekus-Fullstack-Test"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Hablemos",
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Listo para dar vida a tu idea?",
+    "description": "Estoy disponible para proyectos freelance, colaboraciones y oportunidades emocionantes.",
+    "social": "Sígueme en redes",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "sending": "Enviando...",
+    "send": "Enviar Mensaje",
+    "successMessage": "¡Mensaje enviado exitosamente! Te contactaré pronto.",
+    "errorMessage": "Hubo un error. Por favor intenta de nuevo."
+  },
+  "footer": {
+    "rights": "Maikol Duran. Todos los derechos reservados."
+  }
 }

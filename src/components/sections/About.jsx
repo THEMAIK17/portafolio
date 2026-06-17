@@ -2,42 +2,26 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui';
 import { useInView } from '@/hooks/useInView';
 import { FiCode, FiZap, FiUsers, FiTrendingUp } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
-const features = [
-    {
-        id: '1',
-        title: 'Resolución de Problemas',
-        description: 'Enfoque analítico para crear soluciones tecnológicas eficientes',
-        icon: FiCode,
-        gradient: 'from-primary to-secondary',
-        borderColor: 'border-primary',
-    },
-    {
-        id: '2',
-        title: 'Aprendizaje Continuo',
-        description: 'Adaptabilidad y actualización constante en nuevas tecnologías',
-        icon: FiZap,
-        gradient: 'from-secondary to-accent-purple',
-        borderColor: 'border-secondary',
-    },
-    {
-        id: '3',
-        title: 'Metodologías Ágiles',
-        description: 'Trabajo colaborativo en equipos Scrum con herramientas modernas',
-        icon: FiUsers,
-        gradient: 'from-accent-pink to-accent',
-        borderColor: 'border-accent-pink',
-    },
-];
+// Simple icon wrapper to render icon components from an array
+const Icon = ({ component: Comp, className }) => Comp ? <Comp className={className} /> : null;
 
-const stats = [
-    { label: 'Proyectos en Desarrollo', value: 10, icon: FiCode },
-    { label: 'Tecnologías', value: 8, icon: FiZap },
-    { label: 'Años de Formación', value: 2, icon: FiTrendingUp },
-];
+
 
 export function About() {
+    const { t } = useTranslation();
     const { ref, isInView } = useInView({ threshold: 0.1 });
+
+    // Icons are defined locally - they can't be serialized in JSON
+    const featureIcons = [FiCode, FiZap, FiUsers];
+    const statIcons = [FiCode, FiZap, FiTrendingUp];
+
+    const rawFeatures = t('about.features', { returnObjects: true });
+    const features = Array.isArray(rawFeatures) ? rawFeatures : [];
+
+    const rawStats = t('about.stats', { returnObjects: true });
+    const stats = Array.isArray(rawStats) ? rawStats : [];
 
     return (
         <section id="sobre-mi" className="py-20 bg-bg relative overflow-hidden">
@@ -75,7 +59,7 @@ export function About() {
                         transition={{ delay: 0.1, type: 'spring', bounce: 0.3, duration: 0.3 }}
                         className="inline-block px-6 py-3 bg-gradient-to-r from-primary/30 to-secondary/30 border-2 border-primary text-primary rounded-xl text-sm font-bold uppercase tracking-wide mb-6 shadow-lg shadow-primary/20"
                     >
-                        Conóceme
+                        {t('about.badge')}
                     </motion.span>
 
                     <motion.h2
@@ -84,7 +68,7 @@ export function About() {
                         transition={{ delay: 0.2, duration: 0.3 }}
                         className="text-4xl lg:text-6xl font-bold mb-4 text-white"
                     >
-                        Sobre Mí
+                        {t('about.title')}
                     </motion.h2>
                 </motion.div>
 
@@ -101,8 +85,7 @@ export function About() {
                             transition={{ delay: 0.4, duration: 0.3 }}
                             className="text-center lg:text-left"
                         >
-                            Soy <span className="text-primary font-semibold">Ingeniero Mecatrónico</span> y <span className="text-secondary font-semibold">Developer Junior Full-Stack</span>,
-                            con una sólida base analítica aplicada al desarrollo de <span className="text-accent-pink font-semibold">soluciones eficientes</span>.
+                            {t('about.p1_1')} <span className="text-primary font-semibold">{t('about.p1_2')}</span> {t('about.p1_3')} <span className="text-secondary font-semibold">{t('about.p1_4')}</span>{t('about.p1_5')}<span className="text-accent-pink font-semibold">{t('about.p1_6')}</span>{t('about.p1_7')}
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, x: 30 }}
@@ -110,9 +93,7 @@ export function About() {
                             transition={{ delay: 0.5, duration: 0.3 }}
                             className="text-center lg:text-left"
                         >
-                            Tengo experiencia en proyectos usando <span className="text-primary font-semibold">Python, JavaScript, React, C#, y Node.js </span>,
-                            con habilidades en maquetación HTML/CSS y bases de datos MySQL y PostgreSQL. Acostumbrado a trabajar en <span className="text-secondary font-semibold">sprints bajo metodologías ágiles (Scrum)</span>,
-                            participando en ceremonias (dailies, planning) y usando herramientas como Git/GitHub.
+                            {t('about.p2_1')}<span className="text-primary font-semibold">{t('about.p2_2')}</span>{t('about.p2_3')}<span className="text-secondary font-semibold">{t('about.p2_4')}</span>{t('about.p2_5')}
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -120,9 +101,7 @@ export function About() {
                             transition={{ delay: 0.6, duration: 0.3 }}
                             className="text-center lg:text-left"
                         >
-                            Me destaco por mi <span className="text-accent font-semibold">adaptabilidad</span>,
-                            <span className="text-primary font-semibold"> pensamiento estructurado</span> y
-                            <span className="text-secondary font-semibold"> enfoque en la resolución de problemas</span> para crear soluciones tecnológicas efectivas.
+                            {t('about.p3_1')}<span className="text-accent font-semibold">{t('about.p3_2')}</span>{t('about.p3_3')}<span className="text-primary font-semibold">{t('about.p3_4')}</span>{t('about.p3_5')}<span className="text-secondary font-semibold">{t('about.p3_6')}</span>{t('about.p3_7')}
                         </motion.p>
                     </motion.div>
                 </div>
@@ -155,7 +134,7 @@ export function About() {
                                         whileHover={{ rotate: 360, scale: 1.1 }}
                                         transition={{ duration: 0.6 }}
                                     >
-                                        <feature.icon className="w-12 h-12 text-white" />
+                                        <Icon component={featureIcons[index]} className="w-12 h-12 text-white" />
                                     </motion.div>
                                 </div>
 
@@ -189,7 +168,7 @@ export function About() {
                                 whileHover={{ rotate: 360 }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <stat.icon className="w-10 h-10 text-white" />
+                                <Icon component={statIcons[index]} className="w-10 h-10 text-white" />
                             </motion.div>
 
                             <motion.div

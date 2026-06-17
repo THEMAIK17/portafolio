@@ -6,8 +6,10 @@ import { Experience } from '@/components/sections/Experience'
 import { Skills } from '@/components/sections/Skills'
 import { Projects } from '@/components/sections/Projects'
 import { Contact } from '@/components/sections/Contact'
+import { useTranslation } from 'react-i18next'
 
 function App() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -23,7 +25,7 @@ function App() {
       <footer className="bg-surface py-8 border-t border-border text-center">
         <div className="container mx-auto px-4">
           <p className="text-text-muted">
-            © {new Date().getFullYear()} Maikol Duran. Todos los derechos reservados.
+            © {new Date().getFullYear()} {t('footer.rights')}
           </p>
 
         </div>

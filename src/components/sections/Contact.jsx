@@ -10,6 +10,7 @@ import { FiMail, FiPhone, FiMapPin, FiSend, FiCheck, FiX, FiUser, FiMessageSquar
 import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '@/config/emailjs.config';
+import { useTranslation } from 'react-i18next';
 
 const contactMethods = [
     {
@@ -68,6 +69,7 @@ const socialLinks = [
 ];
 
 export function Contact() {
+    const { t } = useTranslation();
     const { ref, isInView } = useInView();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
@@ -155,7 +157,7 @@ export function Contact() {
                         transition={{ type: 'spring', bounce: 0.5 }}
                         className="inline-block px-6 py-3 bg-gradient-to-r from-accent-pink/30 to-accent/30 border-2 border-accent-pink text-accent-pink rounded-xl text-sm font-bold uppercase tracking-wide mb-6 shadow-lg shadow-accent-pink/20"
                     >
-                        Hablemos
+                        {t('contact.badge')}
                     </motion.span>
 
                     <motion.h2
@@ -163,7 +165,7 @@ export function Contact() {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         className="text-3xl lg:text-6xl font-bold mb-4 text-white"
                     >
-                        Ponte en Contacto
+                        {t('contact.title')}
                     </motion.h2>
                 </motion.div>
 
@@ -175,11 +177,11 @@ export function Contact() {
                     >
                         <h3 className="text-3xl font-bold text-text mb-4">
                             <span className="bg-gradient-to-r from-primary to-accent-pink bg-clip-text text-transparent">
-                                ¿Listo para dar vida a tu idea?
+                                {t('contact.subtitle')}
                             </span>
                         </h3>
                         <p className="text-text-muted text-lg mb-10 leading-relaxed">
-                            Estoy disponible para proyectos freelance, colaboraciones y oportunidades emocionantes.
+                            {t('contact.description')}
                         </p>
 
                         <div className="space-y-4 mb-10">
@@ -211,7 +213,7 @@ export function Contact() {
                         </div>
 
                         <div className="text-sm text-text-muted mb-4 font-semibold uppercase tracking-wide">
-                            Sígueme en redes
+                            {t('contact.social')}
                         </div>
                         <div className="flex gap-4">
                             {socialLinks.map((social, index) => (
@@ -243,14 +245,14 @@ export function Contact() {
                                 <div>
                                     <label htmlFor="name" className="flex items-center gap-2 text-sm font-bold text-primary mb-3">
                                         <FiUser className="w-4 h-4" />
-                                        Nombre
+                                        {t('contact.nameLabel')}
                                     </label>
                                     <input
                                         {...register('name')}
                                         type="text"
                                         id="name"
                                         className="w-full px-5 py-4 bg-bg border-2 border-border rounded-xl text-text focus:outline-none focus:border-primary transition-all shadow-inner placeholder-text-muted/50"
-                                        placeholder="Tu nombre completo"
+                                        placeholder={t('contact.namePlaceholder')}
                                     />
                                     {errors.name && (
                                         <motion.p
@@ -267,14 +269,14 @@ export function Contact() {
                                 <div>
                                     <label htmlFor="email" className="flex items-center gap-2 text-sm font-bold text-primary mb-3">
                                         <FiMail className="w-4 h-4" />
-                                        Email
+                                        {t('contact.emailLabel')}
                                     </label>
                                     <input
                                         {...register('email')}
                                         type="email"
                                         id="email"
                                         className="w-full px-5 py-4 bg-bg border-2 border-border rounded-xl text-text focus:outline-none focus:border-primary transition-all shadow-inner placeholder-text-muted/50"
-                                        placeholder="tu@email.com"
+                                        placeholder={t('contact.emailPlaceholder')}
                                     />
                                     {errors.email && (
                                         <motion.p
@@ -291,14 +293,14 @@ export function Contact() {
                                 <div>
                                     <label htmlFor="message" className="flex items-center gap-2 text-sm font-bold text-primary mb-3">
                                         <FiMessageSquare className="w-4 h-4" />
-                                        Mensaje
+                                        {t('contact.messageLabel')}
                                     </label>
                                     <textarea
                                         {...register('message')}
                                         id="message"
                                         rows={6}
                                         className="w-full px-5 py-4 bg-bg border-2 border-border rounded-xl text-text focus:outline-none focus:border-primary transition-all resize-none shadow-inner placeholder-text-muted/50"
-                                        placeholder="Cuéntame sobre tu proyecto..."
+                                        placeholder={t('contact.messagePlaceholder')}
                                     />
                                     {errors.message && (
                                         <motion.p
@@ -326,11 +328,11 @@ export function Contact() {
                                                     transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                                                     className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                                                 />
-                                                Enviando...
+                                                {t('contact.sending')}
                                             </>
                                         ) : (
                                             <>
-                                                Enviar Mensaje
+                                                {t('contact.send')}
                                                 <FiSend className="w-5 h-5" />
                                             </>
                                         )}
@@ -349,12 +351,12 @@ export function Contact() {
                                         {submitMessage === 'error' ? (
                                             <>
                                                 <FiX className="w-5 h-5" />
-                                                Hubo un error. Por favor intenta de nuevo.
+                                                {t('contact.errorMessage')}
                                             </>
                                         ) : (
                                             <>
                                                 <FiCheck className="w-5 h-5" />
-                                                ¡Mensaje enviado exitosamente! Te contactaré pronto.
+                                                {t('contact.successMessage')}
                                             </>
                                         )}
                                     </motion.div>

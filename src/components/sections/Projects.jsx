@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { Card, Badge } from '@/components/ui';
 import { useInView } from '@/hooks/useInView';
-import projectsData from '@/data/projects.json';
+import { useTranslation } from 'react-i18next';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 export function Projects() {
-    const { ref, isInView } = useInView();
+    const { t } = useTranslation();
+    const { ref, isInView } = useInView({ threshold: 0.1 });
+    const projectsData = t('projects.items', { returnObjects: true }) || [];
 
     return (
         <section id="proyectos" className="py-20 bg-bg-elevated">
@@ -17,10 +19,10 @@ export function Projects() {
                     className="text-center mb-16"
                 >
                     <span className="inline-block px-4 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-primary rounded-lg text-sm font-semibold uppercase tracking-wide mb-4">
-                        Mi Trabajo
+                        {t('projects.badge')}
                     </span>
                     <h2 className="text-3xl lg:text-5xl font-bold text-text mb-4">
-                        Proyectos Destacados
+                        {t('projects.title')}
                     </h2>
                 </motion.div>
 
@@ -46,9 +48,10 @@ export function Projects() {
                                                 href={project.demoUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="px-6 py-2 bg-primary text-bg rounded-lg font-bold hover:bg-secondary transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 flex items-center gap-2"
+                                                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(0,245,255,0.4)] transition-all duration-300"
                                             >
-                                                <FiExternalLink /> Demo
+                                                <FiExternalLink className="w-5 h-5" />
+                                                {t('projects.viewDemo')}
                                             </a>
                                         )}
                                         {project.githubUrl && (
@@ -58,7 +61,7 @@ export function Projects() {
                                                 rel="noopener noreferrer"
                                                 className="px-6 py-2 bg-white/10 text-white backdrop-blur-md rounded-lg font-bold hover:bg-white/20 border border-white/20 transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 flex items-center gap-2"
                                             >
-                                                <FiGithub /> Code
+                                                <FiGithub /> {t('projects.viewCode')}
                                             </a>
                                         )}
                                     </div>

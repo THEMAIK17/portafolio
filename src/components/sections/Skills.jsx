@@ -1,50 +1,55 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui';
 import { useInView } from '@/hooks/useInView';
-import skillsData from '@/data/skills.json';
+import { useTranslation } from 'react-i18next';
 import { FiMonitor, FiServer, FiLayers, FiTool, FiTrendingUp } from 'react-icons/fi';
 
-const categoryConfig = {
-    frontend: {
-        icon: FiMonitor,
-        title: 'Frontend',
-        subtitle: 'Desarrollo de interfaces',
-        gradient: 'from-primary to-secondary',
-        bgGradient: 'from-primary/20 to-secondary/20',
-        borderColor: 'border-primary',
-    },
-    backend: {
-        icon: FiServer,
-        title: 'Backend',
-        subtitle: 'Desarrollo del servidor',
-        gradient: 'from-secondary to-accent-purple',
-        bgGradient: 'from-secondary/20 to-accent-purple/20',
-        borderColor: 'border-secondary',
-    },
-    design: {
-        icon: FiLayers,
-        title: 'Soft Skills',
-        subtitle: 'Habilidades Humanas',
-        gradient: 'from-accent-pink to-accent',
-        bgGradient: 'from-accent-pink/20 to-accent/20',
-        borderColor: 'border-accent-pink',
-    },
-    tools: {
-        icon: FiTool,
-        title: 'Herramientas',
-        subtitle: 'DevOps & Productividad',
-        gradient: 'from-accent-purple to-accent',
-        bgGradient: 'from-accent-purple/20 to-accent/20',
-        borderColor: 'border-accent-purple',
-    },
-};
-
 export function Skills() {
+    const { t } = useTranslation();
     const { ref, isInView } = useInView();
+
+    const rawSkillsData = t('skills.items', { returnObjects: true });
+    const skillsData = (rawSkillsData && typeof rawSkillsData === 'object' && !Array.isArray(rawSkillsData))
+        ? rawSkillsData
+        : { frontend: [], backend: [], design: [], tools: [] };
+
+    const categoryConfig = {
+        frontend: {
+            icon: FiMonitor,
+            title: t('skills.frontend') || 'Frontend',
+            subtitle: t('skills.subtitles.frontend'),
+            gradient: 'from-primary to-secondary',
+            bgGradient: 'from-primary/20 to-secondary/20',
+            borderColor: 'border-primary',
+        },
+        backend: {
+            icon: FiServer,
+            title: t('skills.backend') || 'Backend',
+            subtitle: t('skills.subtitles.backend'),
+            gradient: 'from-secondary to-accent-purple',
+            bgGradient: 'from-secondary/20 to-accent-purple/20',
+            borderColor: 'border-secondary',
+        },
+        design: {
+            icon: FiLayers,
+            title: t('skills.design') || 'Soft Skills',
+            subtitle: t('skills.subtitles.design'),
+            gradient: 'from-accent-pink to-accent',
+            bgGradient: 'from-accent-pink/20 to-accent/20',
+            borderColor: 'border-accent-pink',
+        },
+        tools: {
+            icon: FiTool,
+            title: t('skills.tools') || 'Herramientas',
+            subtitle: t('skills.subtitles.tools'),
+            gradient: 'from-accent-purple to-accent',
+            bgGradient: 'from-accent-purple/20 to-accent/20',
+            borderColor: 'border-accent-purple',
+        },
+    };
 
     return (
         <section id="habilidades" className="py-20 bg-bg relative overflow-hidden">
-            {/* Blobs decorativos */}
             <motion.div
                 className="absolute top-10 right-10 w-96 h-96 bg-primary/10 rounded-full blur-[150px]"
                 animate={{
@@ -77,7 +82,7 @@ export function Skills() {
                         transition={{ type: 'spring', bounce: 0.3, duration: 0.4 }}
                         className="inline-block px-6 py-3 bg-gradient-to-r from-primary/30 to-secondary/30 border-2 border-primary text-primary rounded-xl text-sm font-bold uppercase tracking-wide mb-6 shadow-lg shadow-primary/20"
                     >
-                        Mis Capacidades
+                        {t('skills.badge')}
                     </motion.span>
 
                     <motion.h2
@@ -86,14 +91,15 @@ export function Skills() {
                         transition={{ delay: 0.1, duration: 0.3 }}
                         className="text-3xl lg:text-6xl font-bold mb-4 text-white"
                     >
-                        Habilidades Técnicas
+                        {t('skills.title')}
                     </motion.h2>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {Object.entries(skillsData).map(([category, skills], categoryIndex) => {
                         const config = categoryConfig[category] || categoryConfig.tools;
-                        const avgLevel = Math.round(skills.reduce((acc, s) => acc + s.level, 0) / skills.length);
+                        const safeSkills = Array.isArray(skills) ? skills : [];
+                        const avgLevel = safeSkills.length > 0 ? Math.round(safeSkills.reduce((acc, s) => acc + s.level, 0) / safeSkills.length) : 0;
 
                         return (
                             <motion.div
@@ -128,7 +134,7 @@ export function Skills() {
                                         <div className="flex items-center gap-2">
                                             <span className={`w-3 h-3 rounded-full bg-gradient-to-r ${config.gradient}`} />
                                             <span className="text-sm text-text-muted font-medium">
-                                                {skills.length} tecnologías
+                                                {safeSkills.length} {t('skills.techCount')}
                                             </span>
                                         </div>
 
@@ -140,7 +146,7 @@ export function Skills() {
 
                                     {/* Lista de habilidades */}
                                     <ul className="space-y-4">
-                                        {skills.map((skill, index) => (
+                                        {safeSkills.map((skill, index) => (
                                             <motion.li
                                                 key={skill.name}
                                                 initial={{ opacity: 0, x: -20 }}

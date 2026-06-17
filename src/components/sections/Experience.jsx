@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 import { Card, Badge } from '@/components/ui';
 import { useInView } from '@/hooks/useInView';
-import experienceData from '@/data/experience.json';
+import { useTranslation } from 'react-i18next';
 import { FiBriefcase, FiAward, FiMapPin, FiCalendar, FiHome } from 'react-icons/fi';
 
 export function Experience() {
-    const { ref, isInView } = useInView();
+    const { t } = useTranslation();
+    const { ref, isInView } = useInView({ threshold: 0.1 });
+    const rawExperienceData = t('experience.items', { returnObjects: true });
+    const experienceData = Array.isArray(rawExperienceData) ? rawExperienceData : [];
     const workExperience = experienceData.filter((item) => item.type === 'work');
     const education = experienceData.filter((item) => item.type === 'education');
 
@@ -43,15 +46,16 @@ export function Experience() {
                         transition={{ type: 'spring', bounce: 0.5 }}
                         className="inline-block px-6 py-3 bg-gradient-to-r from-secondary/30 to-accent-purple/30 border-2 border-secondary text-secondary rounded-xl text-sm font-bold uppercase tracking-wide mb-6 shadow-lg shadow-secondary/20"
                     >
-                        Mi Trayectoria
+                        {t('experience.badge')}
                     </motion.span>
 
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                        className="text-3xl lg:text-6xl font-bold mb-4 text-white"
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        className="text-4xl lg:text-6xl font-bold mb-4 text-white"
                     >
-                        Experiencia & Educación
+                        {t('experience.title')}
                     </motion.h2>
                 </motion.div>
 

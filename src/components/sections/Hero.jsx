@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui';
 import { siteConfig } from '@/config/site';
 import { FiDownload, FiArrowDown, FiMail } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 export function Hero() {
+    const { t } = useTranslation();
     return (
         <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             <div className="absolute inset-0 -z-10">
@@ -56,7 +58,7 @@ export function Hero() {
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="text-lg text-primary font-semibold mb-4"
                         >
-                            Hola, soy
+                            {t('hero.greeting')}
                         </motion.p>
 
                         <motion.h1
@@ -77,10 +79,10 @@ export function Hero() {
                             className="text-xl lg:text-3xl font-bold text-text mb-6"
                         >
                             <span className="text-white">
-                                Developer Junior Full-Stack
+                                {t('hero.role1')}
                             </span>
                             <br />
-                            <span className="text-text-muted">& Ingeniero Mecatrónico</span>
+                            <span className="text-text-muted">{t('hero.role2')}</span>
                         </motion.h2>
 
                         <motion.p
@@ -89,8 +91,7 @@ export function Hero() {
                             transition={{ delay: 0.7, duration: 0.8 }}
                             className="text-lg text-text-muted mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0"
                         >
-                            Transformo ideas en soluciones tecnológicas eficientes.
-                            Con pensamiento analítico y enfoque en la resolución de problemas, creo aplicaciones con código robusto.
+                            {t('hero.description')}
                         </motion.p>
 
                         <motion.div
@@ -106,7 +107,7 @@ export function Hero() {
                                     onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
                                     className="shadow-lg shadow-primary/30 border-2 border-white"
                                 >
-                                    Ver Proyectos
+                                    {t('hero.viewProjects')}
                                     <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                                         →
                                     </motion.span>
@@ -121,7 +122,7 @@ export function Hero() {
                                     className="shadow-lg shadow-secondary/30"
                                 >
                                     <FiMail className="w-5 h-5" />
-                                    Contáctame
+                                    {t('hero.contactMe')}
                                 </Button>
                             </motion.div>
 
@@ -130,12 +131,12 @@ export function Hero() {
                                     variant="outline"
                                     size="lg"
                                     className="shadow-lg shadow-accent/20"
-                                    onClick={() => window.open('/assets/downloads/CV-ARMANDO DURAN (2).pdf', '_blank')}
+                                    onClick={() => window.open(t('hero.cvFile'), '_blank')}
                                 >
                                     <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                                         <FiDownload className="w-5 h-5" />
                                     </motion.div>
-                                    Descargar CV
+                                    {t('hero.downloadCV')}
                                 </Button>
                             </motion.div>
                         </motion.div>
@@ -207,28 +208,7 @@ export function Hero() {
                 </div>
             </div>
 
-            <motion.div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: [0, 15, 0] }}
-                transition={{
-                    opacity: { delay: 1.5, duration: 0.5 },
-                    y: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
-                }}
-                onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-                <div className="flex flex-col items-center gap-2">
-                    <div className="w-7 h-12 border-2 border-primary rounded-full relative overflow-hidden shadow-lg shadow-primary/50">
-                        <motion.div
-                            className="w-2 h-3 bg-primary rounded-full absolute top-3 left-1/2 -translate-x-1/2"
-                            animate={{ y: [0, 24, 0], opacity: [1, 0, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                        />
-                    </div>
-                    <FiArrowDown className="text-primary w-6 h-6" />
-                    <span className="text-xs text-primary/70 font-semibold">Scroll</span>
-                </div>
-            </motion.div>
+
         </section>
     );
 }

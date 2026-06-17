@@ -1,4 +1,220 @@
 {
-  "nav": { "work": "Mi Trabajo", "projects": "Proyectos Destacados" },
-  "buttons": { "demo": "Demo", "code": "Code" }
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role1": "Junior Full-Stack Developer",
+    "role2": "& Mechatronic Engineer",
+    "description": "I transform ideas into efficient technological solutions. With analytical thinking and a focus on problem-solving, I build applications with robust code.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV",
+    "scroll": "Scroll",
+    "cvFile": "/assets/downloads/CV_Armando_Maikol_Duran.pdf"
+  },
+  "about": {
+    "badge": "Get to Know Me",
+    "title": "About Me",
+    "p1_1": "I am a ",
+    "p1_2": "Mechatronic Engineer",
+    "p1_3": " and ",
+    "p1_4": "Junior Full-Stack Developer",
+    "p1_5": ", with a solid analytical background applied to developing ",
+    "p1_6": "efficient solutions",
+    "p1_7": ".",
+    "p2_1": "I have experience in projects using ",
+    "p2_2": "Python, JavaScript, React, C#, and Node.js",
+    "p2_3": ", with skills in HTML/CSS layout and MySQL/PostgreSQL databases. Used to working in ",
+    "p2_4": "sprints under agile methodologies (Scrum)",
+    "p2_5": ", participating in ceremonies (dailies, planning), and using tools like Git/GitHub.",
+    "p3_1": "I stand out for my ",
+    "p3_2": "adaptability",
+    "p3_3": ", ",
+    "p3_4": "structured thinking",
+    "p3_5": ", and ",
+    "p3_6": "focus on problem-solving",
+    "p3_7": " to create effective technological solutions.",
+    "features": [
+      {
+        "id": "1",
+        "title": "Problem Solving",
+        "description": "Analytical approach to creating efficient technological solutions",
+        "icon": "FiCode",
+        "gradient": "from-primary to-secondary",
+        "borderColor": "border-primary"
+      },
+      {
+        "id": "2",
+        "title": "Continuous Learning",
+        "description": "Adaptability and constant updating in new technologies",
+        "icon": "FiZap",
+        "gradient": "from-secondary to-accent-purple",
+        "borderColor": "border-secondary"
+      },
+      {
+        "id": "3",
+        "title": "Agile Methodologies",
+        "description": "Collaborative work in Scrum teams with modern tools",
+        "icon": "FiUsers",
+        "gradient": "from-accent-pink to-accent",
+        "borderColor": "border-accent-pink"
+      }
+    ],
+    "stats": [
+      { "label": "Projects in Development", "value": 10, "icon": "FiCode" },
+      { "label": "Technologies", "value": 8, "icon": "FiZap" },
+      { "label": "Years of Training", "value": 2, "icon": "FiTrendingUp" }
+    ]
+  },
+  "experience": {
+    "badge": "Trajectory",
+    "title": "Experience & Education",
+    "items": [
+      {
+        "id": "1",
+        "position": "Junior Full-Stack Developer",
+        "company": "Riwi",
+        "location": "Barranquilla, Colombia",
+        "period": "March 2025 - Present",
+        "description": "Intensive training in Full-Stack development, working with Python, JavaScript, C#/.NET, Node.js, React, HTML/CSS, PostgreSQL, and MySQL. Experience in collaborative projects using agile methodologies (Scrum), participating in sprints, dailies, and planning. Use of version control tools like Git/GitHub.",
+        "technologies": ["Python", "JavaScript", "React", "C# / .NET", "Node.js", "HTML/CSS", "MySQL", "PostgreSQL", "Git/GitHub", "Scrum"],
+        "type": "work"
+      },
+      {
+        "id": "2",
+        "position": "Mechatronic Engineer",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "March 2023 - March 2025",
+        "description": "Professional training in mechatronics with a focus on analysis and problem-solving. Solid foundation in analytical and structured thinking applicable to software development and technological solutions.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "3",
+        "position": "Technology in Electromechanical Systems Management",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "August 2021 - March 2023",
+        "description": "Technological training in electromechanical systems, developing technical and project management skills.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "4",
+        "position": "Professional Technician in Electromechanical Maintenance",
+        "company": "Institución Universitaria De Barranquilla",
+        "location": "Barranquilla, Colombia",
+        "period": "January 2019 - July 2021",
+        "description": "Professional technical training in electromechanical maintenance, laying foundations in technical systems and practical problem solving.",
+        "technologies": [],
+        "type": "education"
+      },
+      {
+        "id": "5",
+        "position": "High School Diploma",
+        "company": "Institución Educativa Distrital Inocencio Chinca",
+        "location": "Barranquilla, Colombia",
+        "period": "Completed in December 2018",
+        "description": "Complete secondary education with academic emphasis.",
+        "technologies": [],
+        "type": "education"
+      }
+    ]
+  },
+  "skills": {
+    "badge": "Skills",
+    "title": "Tech Stack",
+    "description": "These are the tools and technologies I use to turn ideas into reality.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Soft Skills",
+    "tools": "Tools",
+    "techCount": "technologies",
+    "subtitles": {
+      "frontend": "Interface development",
+      "backend": "Server-side development",
+      "design": "Human Skills",
+      "tools": "DevOps & Productivity"
+    },
+    "items": {
+      "frontend": [
+        {"name": "HTML", "level": 70},
+        {"name": "CSS", "level": 70},
+        {"name": "JavaScript", "level": 70},
+        {"name": "React", "level": 70}
+      ],
+      "backend": [
+        {"name": "Python", "level": 70},
+        {"name": "C# / .NET", "level": 70},
+        {"name": "Node.js", "level": 70},
+        {"name": "MySQL", "level": 70},
+        {"name": "PostgreSQL", "level": 70}
+      ],
+      "design": [
+        {"name": "Problem Solving", "level": 85},
+        {"name": "Analytical Thinking", "level": 85},
+        {"name": "Adaptability", "level": 90},
+        {"name": "Teamwork", "level": 85},
+        {"name": "Continuous Learning", "level": 95}
+      ],
+      "tools": [
+        {"name": "Git / GitHub", "level": 50},
+        {"name": "Scrum", "level": 50},
+        {"name": "Agile Methodologies", "level": 50}
+      ]
+    }
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "title": "Featured Projects",
+    "viewCode": "View Code",
+    "viewDemo": "View Demo",
+    "items": [
+      {
+        "id": "1",
+        "title": "Firmness - Machinery Management",
+        "description": "Fullstack solution developed for comprehensive inventory, client, and sales management in the construction and machinery rental sector. Based on Clean Architecture and distributed architecture.",
+        "image": "/assets/images/dashboard-firmness.png",
+        "tags": [".NET 8.0", "React 18", "PostgreSQL", "Docker", "Clean Architecture"],
+        "demoUrl": "https://firmeza-admin.vercel.app/",
+        "githubUrl": "https://github.com/THEMAIK17/Firmness"
+      },
+      {
+        "id": "2",
+        "title": "Tekus - Provider REST API",
+        "description": "Backend technical test with DDD architecture and Clean Architecture in .NET 8. REST API documented with Swagger, API Key authentication, efficient dynamic search and pagination. 100% covered with unit tests using xUnit and Moq.",
+        "image": "/assets/images/tekus-preview.png",
+        "tags": [".NET 8.0", "React", "SQL Server", "DDD", "Clean Architecture", "xUnit"],
+        "demoUrl": "",
+        "githubUrl": "https://github.com/THEMAIK17/Tekus-Fullstack-Test"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Let's Talk",
+    "title": "Get in Touch",
+    "subtitle": "Ready to bring your idea to life?",
+    "description": "I am available for freelance projects, collaborations, and exciting opportunities.",
+    "social": "Follow me on social media",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "successMessage": "Message sent successfully! I'll contact you soon.",
+    "errorMessage": "There was an error. Please try again."
+  },
+  "footer": {
+    "rights": "Maikol Duran. All rights reserved."
+  }
 }
